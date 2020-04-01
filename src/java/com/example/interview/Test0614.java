@@ -91,4 +91,17 @@ public class Test0614 {
         }
         System.out.println(list);
     }
+
+    @Test
+    public void test(){
+        String str = "tenantCode_abilityCode_1000";
+        str.lastIndexOf(-1);
+        String[] strArr = str.split("\\_");
+        String codeNumber = strArr[2];
+
+        int maxBizCode= Integer.parseInt(codeNumber);
+        maxBizCode = maxBizCode + 1;
+        str=String.format("%03d",maxBizCode);
+        System.out.println(str);
+    }
 }
